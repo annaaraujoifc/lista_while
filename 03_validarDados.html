@@ -21,23 +21,23 @@
     //PROCESSAMENTO
 
     do {
-        nome = prompt("Informe seu nome: ");
+        nome = prompt(`Informe seu nome: `);
     } while (nome.length <= 3);
 
     do {
-        idade = Number(prompt("Informe sua idade: "));
+        idade = Number(prompt(`Informe sua idade: `));
     } while (idade < 0 || idade > 150);
 
     do {
-        salario = Number(prompt("Informe seu salário: "));
+        salario = Number(prompt(`Informe seu salário: `));
     } while (salario <= 0);
 
     do {
-        sexo = prompt("Informe seu sexo: F/M").toLowerCase();
+        sexo = prompt(`Informe seu sexo: F/M`).toLowerCase();
     } while (sexo !== 'f' && sexo !== 'm');
 
     do {
-        estadoCivil = prompt("Informe seu estado civil: s (solteiro), c (casado), v (viúvo), d (divorciado)").toLowerCase();
+        estadoCivil = prompt(`Informe seu estado civil: s (solteiro), c (casado), v (viúvo), d (divorciado)`).toLowerCase();
     } while (!['s', 'c', 'v', 'd'].includes(estadoCivil));
 
     //SAÍDA
