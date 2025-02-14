@@ -1,0 +1,20 @@
+<script>
+    //Problema: Soma de números até um limite
+    /*
+    Peça para o usuário inserir números sucessivamente e some - os.O programa para quando o usuário inserir 0 e então exibe a soma total.
+    */
+
+    // ENTRADA
+    let soma = 0, numero;
+
+    // PROCESSAMENTO
+    while (true) {
+        numero = parseFloat(prompt("Digite um número (ou 0 para sair):"));
+        if (numero === 0) break;
+        soma += numero;
+    }
+
+    // SAÍDA
+    alert("A soma total é: " + soma);
+
+</script>

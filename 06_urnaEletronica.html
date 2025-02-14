@@ -18,13 +18,37 @@
     c) A porcentagem de votos brancos;
     d) O candidato vencedor.
     */
+    // ENTRADA
+    let joao = 0, maria = 0, nulo = 0, branco = 0, total = 0;
+    let voto;
 
-    //ENTRADA
+    // PROCESSAMENTO
+    while (true) {
+        voto = prompt("Vote:\n1 - Joãozinho\n2 - Mariazinha\n3 - Nulo\n4 - Branco\n0 - Encerrar");
 
+        if (voto === "0") break;
+        if (voto === "1") joao++;
+        else if (voto === "2") maria++;
+        else if (voto === "3") nulo++;
+        else if (voto === "4") branco++;
+        else {
+            alert("Voto inválido, tente novamente.");
+            continue;
+        }
+        total++;
+    }
 
-    //PROCESSAMENTO
+    let percNulo = total ? ((nulo / total) * 100).toFixed(2) + "%" : "0%";
+    let percBranco = total ? ((branco / total) * 100).toFixed(2) + "%" : "0%";
 
+    let vencedor = "Empate";
+    if (joao > maria) vencedor = "Joãozinho";
+    else if (maria > joao) vencedor = "Mariazinha";
 
-    //SAÍDA
-
+    // SAÍDA
+    alert("Resultado:\n" +
+        "Joãozinho: " + joao + "\nMariazinha: " + maria +
+        "\nNulo: " + nulo + " (" + percNulo + ")\nBranco: " + branco + " (" + percBranco + ")" +
+        "\nVencedor: " + vencedor);
+        
 </script>
